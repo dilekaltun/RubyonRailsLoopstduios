@@ -1,104 +1,14 @@
-<div class="square_home">
-        <p>
-        <!-- # raw değişkenin içinde html kodu var ise ve html çalışır şekilde istiyorsak  kullanılır. -->
-        <%= raw @hometitle %> 
-        </p>
-      </div>
-<section class="section one" id="abouthome">
-      <img class="imagecenter" src="<%= @homeimage %>" />
+    <%= render partial: "components/homecard" %>
 
-      <div class="side">
-        <p class="title-side">
-          <%= raw @titleside %>
-        </p>
-
-        <p class="content-side">
-          <%= @homecontent %>
-        </p>
-      </div>
-    </section>
+    <%= render partial: "components/onecard" %>
     
     <section class="section two" id="careers">
-      <h1 class="twotitle">OUR CREATIONS</h1>
-      <button class="twobutton">SEE ALL</button>
+  
+      <h1 class="twotitle"><%= t :h1_title %></h1>
+      <button class="twobutton"><%= t :btn_title %></button>
 
-      <div class="wrapper">
-      <% @liste.each  do |item| %>
-        <div class="box">
-        <img src="<%= item[:image] %>" class="<%= item[:imageclass] %>" />
-        <h4 class="<%= item[:textclass] %>">
-        <%=  raw item[:text] %>
-        </h4>
-      </div>
-      <% end %>
-        
-      </div>
+      <%= render partial: "components/cardlist" %>
 
-      <div class="wrappermobil">
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-deep-earth.jpg" class="mobilimage" />
-          <h4 class="boxtextdeepmobil">
-            DEEP
-            <br />
-            EARTH
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-night-arcade.jpg" class="mobilimage" />
-          <h4 class="boxtextnightmobil">
-            NIGHT
-            <br />
-            ARCADE
-          </h4>
-        </div>
+    <%= render partial: "components/cardlistmobil" %>
 
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-soccer-team.jpg" class="mobilimage" />
-          <h4 class="boxtextsoccermobil">
-            SOCCER
-            <br />
-            TEAM VR
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-grid.jpg" class="mobilimage" />
-          <h4 class="boxtextgridmobil">
-            THE
-            <br />
-            GRID
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-from-above.jpg" class="mobilimage" />
-          <h4 class="boxtextabovemobil">
-            FROM UP
-            <br />
-            ABOVE VR
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-pocket-borealis.jpg" class="mobilimage" />
-          <h4 class="boxtextpocketmobil">
-            POCKET
-            <br />
-            BOREALIS
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-curiosity.jpg" class="mobilimage" />
-          <h4 class="boxtextcuriositymobil">
-            THE
-            <br />
-            CURIOSITY
-          </h4>
-        </div>
-        <div class="boxmobil">
-          <img src="assets/cardmobil/image-fisheye.jpg" class="mobilimage" />
-          <h4 class="boxtextfishmobil">
-            MAKE IT
-            <br />
-            FISHEYE
-          </h4>
-        </div>
-      </div>
     </section>

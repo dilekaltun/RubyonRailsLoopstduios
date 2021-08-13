@@ -29,6 +29,6 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  h1_title: "OUR CREATIONS"
-  btn_title: "SEE ALL"
+tr:
+  h1_title: "KREASYONLARIMIZ"
+  btn_title: "TÜMÜNÜ GÖR"

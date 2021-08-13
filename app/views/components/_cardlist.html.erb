@@ -1,0 +1,11 @@
+<div class="wrapper">
+      <% liste.each  do |item| %>
+        <div class="box">
+        <img src="<%= item[:image] %>" class="<%= item[:imageclass] %>" />
+        <h4 class="<%= item[:textclass] %>">
+        <%=  raw item[:text] %>
+        </h4>
+      </div>
+      <% end %>
+        
+</div>
