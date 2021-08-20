@@ -1,0 +1,11 @@
+<div class="wrappermobil">
+      <% liste_mobil.each  do |item| %>
+        <div class="boxmobil">
+        <img src="<%= item[:image] %>" class="<%= item[:image_class] %>" />
+        <h4 class="<%= item[:text_class] %>">
+        <%=  raw item[:text] %>
+        </h4>
+      </div>
+      <% end %>
+        
+</div>

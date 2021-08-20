@@ -1,10 +1,13 @@
 class HomeController < ApplicationController
 
-  around_action :switch_locale
-
-  def switch_locale(&action)
-    locale = params[:locale] || I18n.default_locale
-    I18n.with_locale(locale, &action)
+  before_action :set_locale
+  private
+  def set_locale
+    I18n.locale = extract_locale || I18n.default_locale
+  end
+  def extract_locale
+    parsed_locale = params[:locale]
+    I18n.available_locales.map(&:to_s).include?(parsed_locale) ? parsed_locale : nil
   end
   def index
   
